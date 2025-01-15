@@ -1,0 +1,21 @@
+:root{
+	--header-blue: #34a1eb;
+	--button-orange: #e6952c;
+	--button-grey: #919191;
+	--button-petrol: #60AFAF;
+	--login-button-grey: #808080;
+	--carts-blue: #D0F2EE;
+	--footer-grey: #2B2B2B;
+	--footer-black: #111111;
+	--footer-light-grey: #727272;
+	--footer-blue: #0023A3;
+	--background-light-blue: #7CADCC;
+	--background-blue: #5B74FF;
+	--textfield-grey: #A0A093;
+	--level-green: #5DC900;
+	--level-orange: #C67D00;
+	--level-red: #B20013;
+	--status-green: #4DE24D;
+	--status-red: #E01F1F;
+	--title-font: "Courier New";
+}

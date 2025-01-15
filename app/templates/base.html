@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    {% block style %}
+        <link rel="stylesheet" href="/static/css/variables.css">
+    {% endblock %}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>{{title}}</title>
+</head>
+<body>
+    <header>
+        {% block header %}
+        {% include "header/header_default.html" %}
+        {% endblock %}
+    </header>
+
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        {% if category == 'error' %}
+                            <div class="alert alert-danger alter-dismissable fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-success alter-dismissable fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        {% block main %}{% endblock %}
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        {% block footer %}
+            <div class="footer_page">
+                <h2 class="informations">Informations</h2>
+                <!-- PARTIE AVEC LES CONTACTS donc Email et Adresse -->
+                <div class="div_milieu">
+                    <div class="div_contacts">
+                        <ul>
+                            <li class="nos_contacts_liste"><h3 class="nos_contacts_liste_h3" style="color:#0d6efd">Contact:</h3></li>
+                            <li class="nos_contacts_liste" style="color: gray;">Email</li>
+                            <li class="nos_contacts_liste">contact@urbanoutfitters.com</li>
+                        </ul>
+                    </div>
+                    <div class="div_adresse">
+                        <ul>
+                            <li class="list-inline-item" style="color: gray;">Adresse postale</li>
+                            <li>IUT d'Orléans<br>16 Rue d'Issoudun<br>45067 Orléans Cedex 2 - France</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <!-- PARTIE AVEC LES RESEAUX SOCIAUX -->
+                <div class="logos_div_parent">
+                    <div class="div_bas">
+                        <div class="div_reseaux">
+                            <ul class="liste_reseaux">
+                                <li class="list-inline-item">
+                                    <a href="https://facebook.com" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class= "fab fa-facebook"></i></a>
+                                </li>
+        
+                                <li class="list-inline-item">
+                                    <a href="https://twitter.com" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class= "fab fa-twitter"></i></a>
+                                </li>
+        
+                                <li class="list-inline-item">
+                                    <a href="https://instagram.com" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class= "fab fa-instagram"></i></a>
+                                </li>
+        
+                                <li class="list-inline-item">
+                                    <a href="https://youtube.com" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class= "fab fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="div_creators">
+                            <a class="text-capitalize" href="https://www.youtube.com/watch?v=_S7WEVLbQ-Y" style="font-family: Roboto, sans-serif;">Creators</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+    </footer>
+
+    
+    {% block js  %}
+    <script src="../static/js/script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    {% endblock  %}
+</body>
+</html>

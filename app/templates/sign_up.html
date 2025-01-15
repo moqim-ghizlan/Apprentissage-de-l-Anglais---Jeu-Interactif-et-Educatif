@@ -1,0 +1,53 @@
+{% extends "base.html" %} 
+
+{% block style %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/sign_up.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+
+{% endblock %}
+
+{% block header %} <!-- le HEADER -->
+{% include "header/header_signup.html" %}
+{% endblock %}
+
+
+{% block main %} 
+    <div class="carts_signup"><!-- div PRINCIPAL -->
+        <div class="images_add"><!-- Partie GAUCHE avec animation -->
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_q5pk6p1k.json"  background="transparent"  speed="1"  style="min-width: 250px; min-height: 250px; max-width: 500px; max-height: 500px;"  autoplay loop></lottie-player>
+        </div>
+        <div class="right"><!-- Partie DROITE avec les inputs -->
+            <div class="main">
+                <h1>Sign Up</h1>
+                <h2>Don't have an account ?</h2>
+                <section class="ma_liste" >
+                    <form  method="POST">
+                        <p>Email</p>
+                        <input type="email" class="btn btn-outline-warning btn_perso" name="email" id="email" placeholder="example@mail.com" value="{{ return_data['email'] }}" required="required">
+                        
+                        <p>Pseudo</p>
+                        <input type="text" class="btn btn-outline-warning btn_perso" name="pseudo" id="pseudo" value="{{ return_data['pseudo'] }}" placeholder="example36351" required="required">
+                        
+                        <p>Full name</p>
+                        <input type="text" class="btn btn-outline-warning btn_perso" name="full_name" value="{{ return_data['full_name'] }}" id="full_name" placeholder="Giorno Giovanna" required="required">
+                        
+                        <p>Password</p>
+                        <input type="password" class="btn btn-outline-warning btn_perso" name="password1" id="password1" placeholder="**********" required="required">
+                        
+                        <p>Repeat Password</p>
+                        <input type="password" class="btn btn-outline-warning btn_perso" name="password2" id="password2" placeholder="**********" required="required">
+                        <p style="color:red; font-size:1.1rem; text-align: center;" > {{ status }} </p>
+                        <br>
+                        <input type="submit" class="btn btn-warning btn-lg btn_login" value="Login">
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock %}

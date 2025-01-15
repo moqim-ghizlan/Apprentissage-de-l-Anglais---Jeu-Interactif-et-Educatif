@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block style %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/liste.css">
+    <link rel="stylesheet" href="/static/css/addClass.css">
+{% endblock %}
+
+{% block header %}
+{% include "header/header_admin.html" %}
+{% endblock %}
+
+{% block main %} 
+    <div class="containerr" style="background-image:url(/static/images/bg_background.jpg)">
+        <div id="centered">
+            <h2 class="page_name">Add a new class</h2>
+            <form id="form" method="POST">
+                <div id="leftPart">
+                    <input id="textField" type="text" name="className" placeholder="Choose a class name">
+                    <input id="submitButton" type="submit" value="Create class">
+                </div>
+                <div id="rightPart">
+                    <p>Choose the teacher to link it to the class</p>
+                    <div id="teacherList">
+                    {% for teacher in teachers_list %}
+                        <div class="teacher">
+                            <input type="radio" name="teacher" value="{{teacher.id}}">
+                            <label for="{{teacher.id}}">{{teacher.nom}}</label>
+                        </div>
+                        <br>
+                    {% endfor %}
+                    </div>
+                </div>           
+            </form>
+        </div>
+    </div>
+{% endblock %}

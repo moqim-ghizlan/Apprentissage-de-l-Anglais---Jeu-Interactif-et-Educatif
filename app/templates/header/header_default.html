@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/static/css/header_default.css">
+<nav id="nav">
+    {% block logo %}
+    <a href="{{ url_for('home') }}" ><img src="/static/images/logo-removebg-preview.png" alt="LOGO" class="logo"></a>
+    {% endblock %}
+
+    <ul class="btns">
+    {% block list %}
+    {% endblock %} 
+    </ul>
+</nav>

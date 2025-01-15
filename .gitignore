@@ -1,0 +1,6 @@
+__pycache__
+appdb.db
+env
+node_modules
+/node_modules
+node_modules/

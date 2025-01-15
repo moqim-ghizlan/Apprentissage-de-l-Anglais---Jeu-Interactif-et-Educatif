@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block style %} {{ super() }}
+<link rel="stylesheet" href="/static/css/chat.css"> {% endblock %} {% block header %} {% endblock %} {% block main %}
+<main style='background-image:url(/static/images/bg_background.jpg);'>
+    <div class="chat-header">
+        <div class="person-name">{{ message_to }}</div>
+    </div>
+    <dev class="center">
+        <dev class="message-sended">
+            <p>This is a message sended from XXX to XXX</p>
+        </dev>
+        <dev class="message-received">
+            <p>This is a message received from XXX to XXX</p>
+        </dev>
+        <dev class="msg-box">
+            <form method="POST" class="msg-form">
+                <input type=" text " name="message " id="message " class="message " placeholder="Enter your message ">
+                <input type="submit " value="Send ">
+            </form>
+
+        </dev>
+    </dev>
+</main>
+{% endblock %}

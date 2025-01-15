@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block style %}
+{{ super() }}
+<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>    
+<link href="/static/css/edit_profil.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block header %}
+{% include "header/header_editProfile.html" %}
+{% endblock %}
+
+
+{% block main %}
+    <div class="page_principal" id="flex-container"><!-- La Page Principal -->
+        <div class="top">
+            <p>Edit your profile</p>
+        </div>
+        <div class="menu">
+            <form method="POST" enctype="multipart/form-data" action="{{ url_for('editProfil_eleve')}}">
+                <div class="left"><!-- Partie avec les inputs -->
+                    <div class="col1">
+                        <input type="text" name="fname" id="fname" class="fname" value="{{ current_user.pseudo }}">
+                    </div>
+                    <div class="col2">
+                        <input type="email" name="email" id="email" class="femail" value="{{ current_user.adresseMail }}">
+                    </div>
+                    <div class="col3">
+                        <div class="pwd">
+                            <label>
+                                <input type="password" name="password" id="password_i" class="femail" value="" placeholder="Enter the password"> <!--ajouter maxlength="26"-->
+                                <div class="password-icon">
+                                    <em data-feather="eye"></em>
+                                    <em data-feather="eye-off"></em>
+                                </div>
+                            </label>
+                            <!-- ICONE SCRIPT -->
+                            <script src="https://unpkg.com/feather-icons"></script>
+                            <!-- PASSWORD SCRIPT -->
+                            <script>
+                                feather.replace();
+
+                                const eye = document.querySelector(".feather-eye");
+                                const eyeoff = document.querySelector(".feather-eye-off");
+                                const passwordField = document.querySelector("input[type=password]");
+
+                                eyeoff.addEventListener("click", () => {
+                                    eyeoff.style.display = "none";
+                                    eye.style.display = "block";
+                                    passwordField.type = "text";
+                                });
+                                
+                                eye.addEventListener("click", () => {
+                                    eye.style.display = "none";
+                                    eyeoff.style.display = "block";
+                                    passwordField.type = "password";
+                                });                              
+                            </script>
+                        </div>
+                    </div>
+                    <p class="error">{{ error_msg }}</p>
+                    <div class="col4">
+                        <a style="padding: 10px 20px 10px 20px;"class="fcheckbox">
+                            <input class="submit" type="submit" value="CONFIRM">
+                        </a>
+                    </div>
+                </div>
+                <div class="right"><!-- Partie avec le select file -->
+                    <img src="/static/images/users_images/{{ current_user.image }}" alt="LOGO">
+                    <button type="button" class="button_file">
+                        <input type="file" name="file" id="file" class="input_file">
+                        <label for="file">Select a file</label>
+                    </button>
+                </div>
+             </form>
+        </div>
+    </div>
+{% endblock %}
+{% block js  %}
+    {{ super() }}
+{% endblock  %}

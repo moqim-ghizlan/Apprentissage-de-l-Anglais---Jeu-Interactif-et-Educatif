@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="creationMap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Créer map</title>
+</head>
+<body>
+    <div id="paramList">
+        <div id="editing">
+            <p>Edit existing map</p>
+            <select id="mapSelector"></select>  
+        </div>
+        <div id="creation">
+            <p>Create new map</p>
+            <div id="mapSettings">
+                <input type="text" name="name" id="mapName" placeholder="Map name">    
+                <input type="number" min="2" name="width" id="mapWidth" placeholder="Width">
+                <input type="number" min="2" name="height" id="mapHeight" placeholder="Height">
+            </div>
+<!--             <div id="tilesetSettings">
+                <label for="tileset">Select tileset</label>                 
+                <input type="file" name="mapTileset" id="mapTileset">
+                <input type="number" min="1" id="tilesPerLine" name="tilesPerLine" placeholder="Tiles per line">
+            </div> 
+            <div id="spriteSettings">
+                <label for="sprite">Select sprite</label>
+                <input type="file" name="mapSprite" id="mapSprite" placeholder="Select sprite">
+            </div> -->
+        <button id="createMapButton">Create</button>
+        </div>
+        <div id="deleting">
+            <p>Delete selected map</p>
+            <button id="deleteMapButton">Delete</button>
+        </div>
+    </div>
+    <div>
+        <canvas id="cnv"></canvas>
+    </div>
+    <div id="elementList">
+    </div> 
+</body>
+</html>
+<script type="text/javascript" src="js/creationMap.js"></script>

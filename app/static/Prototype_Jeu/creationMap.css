@@ -1,0 +1,75 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#paramList{
+	flex-basis: 100vw;
+	flex-grow: 1;
+	background-color: lightblue;
+	display: flex;
+	align-content: space-between;
+	padding: 3%;
+}
+
+#editing{
+	flex-basis: 30%;
+}
+
+/*#deleting{
+	flex-basis: 20%;
+}*/
+
+#creation{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+
+#mapSettings, #tilesetSettings, #spriteSettings{
+	flex-basis: 100%;
+}
+
+#cnv{
+  	width: 89vh;
+  	height: 89vh;
+  	background-color: yellow;
+	margin: 5vh;
+	cursor: url("img/cursor.png"), auto;
+}
+
+#elementList{
+	margin: 5vh;
+	background-color: pink;
+	height: 89vh;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#tileSelector{
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.tile{
+	margin: 1%;
+	display: inline-block;
+	height: fit-content;
+}
+
+#tileSelector + .tileIcon{
+	cursor: pointer;
+}
+
+#tileSelector:checked + .tileIcon{
+	outline: 2px solid black;
+}	
+

@@ -1,0 +1,342 @@
+/*CSS de editProfil.html*/
+
+*{
+    list-style: none;
+}
+
+/* PAGE PRINCIPAL */
+
+
+html {
+    padding:0;
+    margin:0;
+    height: 100%;
+}
+
+body {
+    padding:0;
+    margin:0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    height: 100%;
+    padding:0;
+    margin:0;
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+}
+
+.page_principal{
+    background-image: url("../images/bg_background.png");
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-family: Comfortaa;
+    width: 100%;
+	flex-grow: 1;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#flex-container {
+	display: flex;
+}
+
+#flex-container > .flex-item {
+	flex: auto;
+}
+
+.top > p{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-family:bold;
+    font-family: Comfortaa;
+    margin-top: 2%;
+    width: auto;
+}
+
+/* TITRE DU MAIN */
+.top{
+    height: 100px;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+form{
+    display: flex;
+    flex-flow: wrap row;
+    flex-direction: row;
+}
+
+/* Les 2 div principales du main */
+
+.left{
+    flex-basis: 55%;
+    margin-right: auto;
+    height: auto;
+    flex-direction: column;
+}
+
+.right{
+    display: flex;
+    flex-basis: 40%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.left > div{
+    justify-content: center;
+}
+
+.col1{
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.col2{
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.col3{
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+.col4{
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-bottom:20px;
+}
+
+.pwd{
+    flex-basis: 50%;
+}
+
+
+.right > svg{
+    height: auto;
+    margin-bottom: 1%;
+}
+
+.main > .left > button{
+    background-color: #4B91AF;
+    border-radius: 120px 1px / 170px;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* PARTIE GAUCHE: les inputs */
+
+.fname{
+    background: white;
+    border-radius: 50px 0px;
+    border: none;
+    padding: 12px 20px;
+    margin: 8px 0;
+    width: 592px;
+    height: 51px;
+    top: 255px;
+}
+
+
+.femail{
+    background: white;
+    border-radius: 50px 0px;
+    border: none;
+    padding: 12px 20px;
+    margin: 8px 0;
+    width: 592px;
+    height: 51px;
+    left: 114px;
+    top: 370px;
+}
+
+.fcheckbox{
+    background: linear-gradient(42.76deg, #4B91AF 0%, #72A6B6 100%);
+    border-radius: 100px;
+    border: none;
+    margin: 8px 0;
+    height: 51px;
+    width: 200px;
+    font-size: 24px;
+    color:white;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.fchange{
+    background: linear-gradient(42.76deg, #af5f4b 0%, #b69172 100%);
+    border-radius: 100px;
+    border: none;
+    padding: 12px 20px;
+    height: 51px;
+    width: 200px;
+    font-size: 24px;
+    color:white;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    position: relative;
+  }
+
+label input {
+    font-size: 1em;
+    color: black;
+    background: transparent;
+    padding: 1rem 1.2rem;
+    width: 350px;
+    border-radius: 5px;
+    border: 2px solid #7a7a7a;
+    transition: all 0.2s;
+}
+
+.submit{
+    background-color: transparent;
+    border:transparent;
+}
+
+label input:focus {
+    border-color: #993137;
+}
+
+label .password-icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 20px;
+    color: black;
+    transition: all 0.2s;
+}
+
+label .password-icon:hover {
+    cursor: pointer;
+    color: #ff4754;
+}
+
+label .password-icon .feather-eye {
+    display: none;
+}
+
+/* PARTIE DROITE: le select file */
+
+.input_file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.input_file + label {
+    font-size: 24px;
+    font-family: Comfortaa;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.right > img{
+    width: 50%;
+    transform: scale(0.75);
+}
+
+
+.button_file{
+    background: #C4C4C4;
+    border-radius: 10px;
+    border: none;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+@media (max-width:1200px){
+
+    *{
+        overflow-x: hidden;
+    }
+
+    .page_principal{
+        background-repeat: repeat;
+        width: auto;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .left{
+        flex-basis: 100%;
+        margin-right: auto;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .right{
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .top > p{
+        margin-top: 3%;
+        font-size: 2rem;
+    }
+
+
+    .col4{
+        margin-bottom: 3%;
+    }
+
+    .input_file + label{
+        display: inline;
+    }
+
+    .fname{
+        width:340px;
+
+    }
+
+    .femail{
+        width:340px;
+    }
+
+    .fpassword{
+        width:340px;
+    }
+
+    .col3{
+        flex-direction: column;
+    }
+
+    .divchange{
+        padding: 15px;
+    }
+}

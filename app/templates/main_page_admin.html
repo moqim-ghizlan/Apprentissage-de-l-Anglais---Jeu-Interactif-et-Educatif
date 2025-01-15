@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block style %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/admin_main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+{% endblock %}
+
+{% block header %}
+{% include "header/header_admin.html" %}
+{% endblock %}
+
+{% block main %} 
+    <div class="content" style="background-image:url(/static/images/bg_background.jpg)">
+        <h1>Dashboard</h1>
+        <div class="line"></div>
+        <div class="teachers_section">
+            <h2>Teachers section</h2>
+            <ul>
+                <li><a href="list_admin/teacher"><button class="btn btn-light btn-outline-secondary">Teachers list</button></a></li>
+                <li><a href="{{ url_for('addTecher_admin') }}"><button class="btn btn-light btn-outline-secondary">Add a new teacher</button></a></li>
+            </ul>
+        </div>
+        <div class="line"></div>
+        <div class="classes_section">
+            <h2>Classes section</h2>
+            <ul>
+                <li><a href="list_admin/class"><button class="btn btn-light btn-outline-secondary">Classes list</button></a></li>
+                <li><a href="{{ url_for('addClass_admin') }}"><button class="btn btn-light btn-outline-secondary">Add a new class</button></a></li>
+            </ul>
+        </div>
+        <div class="line"></div>
+        <div class="students_section">
+            <h2>Students section</h2>
+            <ul>
+                <li><a href="list_admin/student"><button class="btn btn-light btn-outline-secondary">Students list</button></a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

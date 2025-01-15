@@ -1,0 +1,6 @@
+{% if current_user.id_R == 1 %}
+    {% include "header/header_student.html" %}
+{% elif current_user.id_R == 2 %}
+    {% include "header/header_teacher.html" %}
+{% else %}
+{% endif%}

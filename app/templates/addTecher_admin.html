@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block style %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/addTeacher.css">
+{% endblock %}
+
+{% block header %}
+{% include "header/header_admin.html" %}
+{% endblock %}
+
+
+{% block main %} 
+    <div class="add_teacher">
+        <div id="centeredBox">
+            <p class="page_titre">Add new teacher account</p>
+            <form method="POST" id="formBox">
+                <div id="fieldsBox">
+                    <input class="inputElem fields higherFields" type="text" name="fname" placeholder="First name" required="required">
+                    <input class="inputElem fields higherFields" type="text" name="lname" placeholder="Last name" required="required">
+                </div>
+                <input class="inputElem fields lowerFields" type="email" name="email" placeholder="firstName.lastName@univ-orléans.fr" required="required">
+                <input class="inputElem fields lowerFields" type="text" name="password" placeholder="Suggestion : {{generate_random_password}}">
+                <p id="errorMsg">{{ error_msg }}</p>
+                <input type="submit" value="CONFIRM" id="submitButton">
+            </form>
+        </div>
+    </div>
+{% endblock %}

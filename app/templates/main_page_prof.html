@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+
+{% block style %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/eleve.css">
+{% endblock %}
+ 
+{% block header %}
+{% include "header/header_teacher.html" %}
+</div>
+{% endblock %}
+
+{% block main %} 
+<main style='background-image:url(../static/images/bg_background.jpg);'>
+    <div class="container imagebackground" >
+        <a class="btn_start_game" href="#">EDIT MAP</a>
+    </div>
+</main>
+{% endblock %}

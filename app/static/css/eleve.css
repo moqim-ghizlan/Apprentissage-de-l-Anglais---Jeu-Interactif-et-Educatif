@@ -1,0 +1,102 @@
+*{
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    padding:0;
+    margin:0;
+    height: 100%;
+}
+
+body {
+    padding:0;
+    margin:0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    height: 100%;
+    padding:0;
+    margin:0;
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+}
+
+.main{
+    width: 100%;
+	flex-grow: 1;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#menu {
+    background-color: rgb(128, 128, 128, 0.4);
+    position:absolute;
+    right:10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content:space-around;
+    margin-top: 6em;
+    padding: 1em;
+    
+}
+#menu > ul > li > a {
+    color: black;
+
+}
+
+.line {
+    width: 53px;
+    height: 0;
+    border: 1px solid #646464;
+    margin: 3px;
+    display:inline-block;
+  }
+
+.menu > ul{
+    width: 8em;
+}
+
+.container {
+    height: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.imagebackground{
+    
+    color:black;
+    margin: 0%;
+}
+
+.btn_start_game{
+    background-color: blue;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+}
+.imagebackground > img{
+    z-index: -1;
+    position:absolute;
+    width: 100vh;
+    height: 100vh;
+}
+
+
+body{
+    overflow-x: hidden;
+}

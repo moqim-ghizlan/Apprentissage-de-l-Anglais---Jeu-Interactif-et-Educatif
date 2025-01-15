@@ -1,0 +1,174 @@
+ 
+*{
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    padding:0;
+    margin:0;
+    height: 100%;
+}
+
+body {
+    padding:0;
+    margin:0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    height: 100%;
+    padding:0;
+    margin:0;
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+}
+
+
+
+.stat_container {
+    width: 530px;
+    margin: 0 auto;
+    background-color: rgba(156, 173, 252, 0.9);
+    border-radius: 10px;
+    text-align:center;
+    margin-bottom: 100px;
+    padding-bottom: 5vh;
+}
+
+
+h1{
+    flex-wrap: wrap;
+    
+    text-align: center;
+    padding-bottom: 8vh;
+    padding-top: 5vh;
+}
+
+.top{
+    text-align: center;
+}
+
+.content > table{
+    margin-bottom: 0;
+}
+
+.content{
+    padding: 1em;
+}
+
+
+.right-stat{
+    float: right;
+	width: 150px;
+    border-left: 2px solid var(--textfield-grey);
+    height: 150px;
+}
+
+.center-stat{
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+}
+
+.left-stat{
+    float: left;
+	width: 150px;
+    border-right: 2px solid var(--textfield-grey);
+    height: 150px;
+}
+
+.title-stat{
+    font-size: large;
+    color: var(--footer-light-grey) ;
+}
+
+.level1{
+    border-width:1px;
+    border-style:solid;
+    border-color:var(--level-green);
+    color: var(--level-green);
+    border-radius: 10px;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+.level2{
+    border-width:1px;
+    border-style:solid;
+    border-color:var(--level-orange);
+    color: var(--level-orange);
+    border-radius: 10px;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+.level3{
+    border-width:1px;
+    border-style:solid;
+    border-color:var(--level-red);
+    color: var(--level-red);
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.content > div {
+    margin: 10px;
+}
+
+.left-stat > ul{
+    padding-left: 0px;
+}
+
+.center-stat > ul{
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+.right-stat > ul{
+    padding-left: 0px;
+}
+
+.bg_white{
+    background-color: var(--textfield-grey);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 0.5vh 0 0.5vh 0;
+
+}
+.vertical-line{
+    overflow: hidden;
+    border-left: 2px solid var(--textfield-grey);
+    display: inline-block;
+    height: 150px;
+}
+
+.score > a{
+    color: white;
+}
+
+.vague{
+    position: absolute;
+    z-index: -3;
+    background-color: #A2D9FF;
+}
+@media screen and (max-width:888px){
+    body{
+      background-color: #A2D9FF;
+      background-repeat: no-repeat,repeat-x;
+      
+    }
+  }
+
+.active_status{
+    color:green;
+    font-size: 1.5rem;
+}
+.offline_status{
+    color:red;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block style %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/index.css">
+{% endblock %}
+
+{% block header %}
+{% include "header/header_index.html" %}
+{% endblock %}
+
+{% block main %} 
+    <canvas id="cnv"></canvas>
+    <div class="top">
+        <h1> FINALLY, A NEW WAY TO IMPROVE!</h1>
+        <a href="{{ url_for('sign_up') }}">Try for free</a>
+    </div>
+    <div class="carts">
+        <div class="cart">
+            <div class="cart-img">
+                <img src="/static/images/home_page_img_1.png" alt="PLACEHOLDER">
+            </div>
+            <p>Free website</p>
+        </div>
+        <div class="cart">
+            <div class="cart-img">
+                <img src="/static/images/home_page_img_2.png" alt="PLACEHOLDER">
+            </div>
+            <p>Learn English grammar, punctuation and vocabulary</p>
+        </div>
+        <div class="cart">
+            <div class="cart-img">
+                <img src="/static/images/home_page_img_3.png" alt="PLACEHOLDER">
+            </div>
+            <p>Escape game</p>
+        </div>
+    </div>
+    <div class="bottom">
+        <p>
+            <font>Too hard becomes too easy</font>
+        </p>
+    </div>
+{% endblock %}

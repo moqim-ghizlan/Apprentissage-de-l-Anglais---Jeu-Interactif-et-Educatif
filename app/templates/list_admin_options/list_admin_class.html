@@ -1,0 +1,10 @@
+{% for element in elements %}
+<tr>
+    <td class="list-admin-class-img">{{ element[0] }}</td>
+    <td>{{ element[1] }}</td>
+    <td>{{ element[2].nom }}</td>
+    <td>
+        <a href="{{ url_for('delete_class', id = element[-1]) }}"><button class="btn btn-light btn-outline-secondary">Delete</button></a>
+    </td>
+</tr>
+{% endfor %}

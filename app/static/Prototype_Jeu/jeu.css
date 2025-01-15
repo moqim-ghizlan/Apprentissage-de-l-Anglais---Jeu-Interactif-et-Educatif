@@ -1,0 +1,23 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+}
+
+#cnv{
+  	width: 89vh;
+  	height: 89vh;
+  	background-color: yellow;
+	margin: 5vh;
+}
+
+#playerInfo{
+	margin: 5vh;
+	background-color: pink;
+	width: 20%;
+	height: 89vh;
+}

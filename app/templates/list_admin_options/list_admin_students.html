@@ -1,0 +1,12 @@
+{% for element in elements %}
+<tr>
+    <td><img src="{{url_for('static', filename='../../static/images/users_images/'+ element[0] )}}" alt="element[0]" ></td>
+    <td>{{ element[1] }}</td>
+    <td>{{ element[2] }}</td>
+    <td>{{ element[3] }}</td>
+    <td>
+        <a href="{{ url_for('delete_person', id = element[-1], list_type='student') }}"><button class="btn btn-light btn-outline-secondary">Delete</button></a>
+        <a href="{{ url_for('add_student', student_id = element[-1]) }}"><button class="btn btn-light btn-outline-secondary">Add to class</button></a>
+    </td>
+</tr>
+{% endfor %}

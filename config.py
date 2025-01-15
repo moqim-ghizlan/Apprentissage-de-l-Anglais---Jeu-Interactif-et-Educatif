@@ -1,0 +1,7 @@
+SECRET_KEY = 'hjshjhdjah kjshkjdhjs'
+
+APP_ID = 1200420960103822
+
+SQLALCHEMY_DATABASE_URI = 'sqlite:///appdb.db'
+
+SQLALCHEMY_TRACK_MODIFICATIONS = False

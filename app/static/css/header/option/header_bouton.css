@@ -1,0 +1,27 @@
+.optioneleve{
+    border: solid 1.5px var(--header-blue);
+    border-radius: 5px;
+    color: #ffff;
+    font-weight: bold;
+    font-size: 1vw;
+    background-color: var(--header-blue);
+    display: block;
+    text-align: center;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    margin-right: 1em;
+}
+
+.optioneleve2{
+    border: solid 1.5px var(--header-blue);
+    border-radius: 5px;
+    color: var(--header-blue);
+    font-weight: bold;
+    font-size: 1vw;
+    background-color: #ffff;
+    display: block;
+    text-align: center;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    margin-right: 1em;
+}

@@ -1,0 +1,107 @@
+/*CSS de footer*/
+
+*{
+    list-style: none;
+}
+
+.footer_page{
+    overflow-x: hidden;
+}
+
+/* 1ere partie du footer: titre du footer */
+
+.informations{
+    text-align: center;
+    overflow-y:hidden;
+    font-family: Roboto, sans-serif;
+}
+
+/* 2e partie du footer: contacts et adresse */
+
+
+.div_milieu{
+    display: flex;
+    text-align: center;
+}
+
+.div_contacts{
+    flex-basis: 50%;
+    text-align: end;
+    border-right: 2px solid gray;
+}
+
+.div_contacts > ul{
+    padding-left: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.div_adresse{
+    flex-basis: 50%;
+}
+
+.div_adresse > ul{
+    padding-left: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.nos_contacts_liste{
+    text-align: center;
+    overflow-y: hidden;
+}
+
+.nos_contacts_liste > h3{
+    overflow-y: hidden;
+    font-family: Roboto, sans-serif;
+}
+
+.nos_contacts_liste_h3{
+    text-align: center;
+}
+
+/* Derniere partie du footer: reseaux sociaux */
+
+.div_bas{
+    display: flex;
+    text-align: center;
+}
+
+.div_reseaux{
+    flex-basis: 50%;
+}
+
+.div_creators{
+    flex-basis: 50%;
+}
+
+.liste_reseaux{
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.list-inline-item{
+    overflow-y: hidden;
+}
+
+
+/* Page sur MOBILE */
+@media (max-width:650px) {
+
+    .informations{
+        margin-bottom: 1rem;
+    }
+
+    .div_milieu{
+        flex-direction: column;
+    }
+
+    .div_contacts{
+        border-right: 0;
+        border-bottom: 0.01rem solid gray;
+        margin-bottom: 1rem ;
+    }
+
+    .div_bas{
+        flex-direction: column;
+    }
+}
