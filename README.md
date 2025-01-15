@@ -1,6 +1,4 @@
 # Apprentissage Anglais
-![Image text](https://cdn.discordapp.com/attachments/639870893710901264/954304419296579604/logo-removebg-preview.png)
-***
 ## Bienvenue sur le README de notre site web.
 
 ### Explication du projet
