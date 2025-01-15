@@ -1,10 +1,3 @@
----
-noteId: "9d0cde90d37711efa6c2d1abb9925e08"
-tags: []
-
----
-
-
 # Apprentissage Anglais
 ![Image text](https://cdn.discordapp.com/attachments/639870893710901264/954304419296579604/logo-removebg-preview.png)
 ***
